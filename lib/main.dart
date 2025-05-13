@@ -41,6 +41,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Gym App',
+      debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
         '/':
