@@ -9,6 +9,7 @@ import 'features/auth/screens/login_screen.dart';
 import 'features/auth/screens/register_screen.dart';
 import 'features/home/screens/home_screen.dart';
 import 'features/user_data/repository/user_repository.dart';
+import 'features/splash/splash_screen.dart';
 
 void main() async {
   await dotenv.load();
@@ -42,8 +43,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Gym App',
       debugShowCheckedModeBanner: false,
-      initialRoute: '/',
+      initialRoute: '/splash',
       routes: {
+        '/splash': (context) => const SplashScreen(),
         '/':
             (context) => BlocBuilder<AuthBloc, AuthState>(
               builder: (context, state) {
